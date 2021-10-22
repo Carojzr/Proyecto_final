@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Imagenes/balag.png</file>
+        <file>Imagenes/balas3ida.png</file>
+        <file>Imagenes/balas3vuel.png</file>
+        <file>Imagenes/Discovery.png</file>
+        <file>Imagenes/Enano Rojo.png</file>
+        <file>Imagenes/Enterprise.png</file>
+        <file>Imagenes/flebaj.png</file>
+        <file>Imagenes/fleder.png</file>
+        <file>Imagenes/fleizq.png</file>
+        <file>Imagenes/fleup.png</file>
+        <file>Imagenes/fondo.jpg</file>
+        <file>Imagenes/fondo1.jpg</file>
+        <file>Imagenes/fondo13.jpg</file>
+        <file>Imagenes/fondo145.jpg</file>
+        <file>Imagenes/fondo148.jpg</file>
+        <file>Imagenes/fondojuego.png</file>
+        <file>Imagenes/Galactica.png</file>
+        <file>Imagenes/piso.jpg</file>
+        <file>Imagenes/Serenity.png</file>
+        <file>Imagenes/Tamaran01.jpg</file>
+        <file>Imagenes/Tamaran10.jpg</file>
+        <file>Imagenes/tyit.jpg</file>
+        <file>Imagenes/tyit21.png</file>
+        <file>Imagenes/tyit23.png</file>
+        <file>Imagenes/tyit33.png</file>
+    </qresource>
+</RCC>
