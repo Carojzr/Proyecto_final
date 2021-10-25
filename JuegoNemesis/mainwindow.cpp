@@ -13,12 +13,15 @@ MainWindow::MainWindow(QWidget *parent)
 
     timer1 = new QTimer;
     timer=new QTimer(this);
+    timer2=new QTimer;
     setFixedSize(1265,695);
     ui->setupUi(this);
     this->jugador1=new Jugador("Jugador 1",5,5,1);
     this->jugador2=new Jugador("Jugador 2",5,5,2);
     juegoActual=new Jugada("default", this->jugador1,this->jugador2,1);//se crea una neuva partida
     setnivel(nivel, juegoActual);
+
+
 
 
     l1 = new QGraphicsLineItem(-604,-201,604,-201); // <-- Linea arriba
@@ -30,11 +33,13 @@ MainWindow::MainWindow(QWidget *parent)
     scene -> addItem(l3);
     scene -> addItem(l4);
     timer->stop();
-
+    timer2->stop();
     connect(timer,SIGNAL(timeout()),this,SLOT(Actualizacion()));
     connect(timer1,SIGNAL(timeout()),this,SLOT(mover()));
-
+    connect(timer2,SIGNAL(timeout()),this,SLOT(actualizar()));
     timer1->start(30);
+    timer2->start(dtt_);
+
 //    w2= new QMainWindow(this);
 //    scene3=new QGraphicsScene();
 //    v2=new QGraphicsView(scene3,w2);
@@ -45,6 +50,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+
 }
 
 void MainWindow::setjugador1(Jugador *jugador1)
@@ -60,10 +66,6 @@ void MainWindow::setjugador1(Jugador *jugador1)
         scene1->addItem(dis);
     }
     ui->lista1->addItems(jugador1->getNombreNaves());//desplega la lista de las naves del primer jugador
-
-
-
-
 }
 
 void MainWindow::setjugador2(Jugador *jugador2)
@@ -514,6 +516,8 @@ void MainWindow::on_Iniciar_clicked()  //boton iniciar
         ui->Disparar2->setEnabled(false);
     }
 
+
+
 }
 
 
@@ -561,7 +565,8 @@ void MainWindow::on_Piedras_clicked()  //agregar las piedras
 
     esfera.push_back(new piedras());  //agrega un nuevo objeto y se agrega al final
                                                 //de la lista
-    scene-> addItem(esfera.last());
+
+
 
 }
 
@@ -654,9 +659,53 @@ void MainWindow::on_nuevaP_clicked()//nueva partida
     setnivel(1,juegoActual);
 }
 
+void MainWindow::setplanetas() //agrega los planetas a la escena
+{
+
+    for (int i=0; i< cuerpos.size() ; i++) {
+        cuerpos[i]->setEscala(0.05);
+        scene->addItem(cuerpos[i]);}
+}
+
+QColor* MainWindow::colorRandom() //darle un color a los circulos
+{
+    int r=qrand() % 255;
+    int g=qrand() % 255;
+    int b=qrand() % 255;
+
+    return new QColor(r,g,b,255);
+}
+void MainWindow::actualizar()// actualiza los movimientos en la escena
+{
+    for (int i = 1;i< cuerpos.size() ;i++ ) {
+        cuerpos[i]->getEsf()->getr(cuerpos[0]->getEsf()->getPX(),cuerpos[0]->getEsf()->getPY());
+        float masa=cuerpos[0]->getEsf()->getmasa();
+        cuerpos[i]->actualizar(masa,cuerpos[0]->getEsf()->getPX(),cuerpos[0]->getEsf()->getPY(),dtt_);
+
+    }
+}
+
+void MainWindow::on_planeta_clicked()
+{
+    //timer2->start(dtt_);
+
+    cuerpos.append(new cuerpodib(-100,0,0,0,70000,300));
+    cuerpodib * cuerpo=new cuerpodib(-3600,0,2,2,70,70);
+    cuerpo->setColor(Qt::green);
+    cuerpodib * cuerpo1=new cuerpodib(-3000,0,-2,-2,70,70);
+    cuerpo1->setColor(Qt::red);
+    cuerpos.append(cuerpo);
+    cuerpos.append(cuerpo1);
+//    cuerpos.append(new cuerpodib(-100,0,0,0,70000,300));
+//    //cuerpos.push_back(new cuerpodib(0,0,0,0,70,300));
+//    scene-> addItem(cuerpos.back());
+//    cuerpos.append(new cuerpodib(-3600,0,2,2,70,80));
+//    scene-> addItem(cuerpos.back());
 
 
+//    cuerpos.append(new cuerpodib(-3000,0,0,-2,70,70));
+//    scene-> addItem(cuerpos.back());
+    setplanetas();
 
-
-
+}
 

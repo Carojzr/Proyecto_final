@@ -11,6 +11,8 @@ CONFIG += c++11
 SOURCES += \
     bala.cpp \
     baladib.cpp \
+    cuerpo.cpp \
+    cuerpodib.cpp \
     disparabo.cpp \
     disparo.cpp \
     dispmrua.cpp \
@@ -25,6 +27,8 @@ SOURCES += \
 HEADERS += \
     bala.h \
     baladib.h \
+    cuerpo.h \
+    cuerpodib.h \
     disparabo.h \
     disparo.h \
     dispmrua.h \

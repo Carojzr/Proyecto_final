@@ -2374,7 +2374,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/fleup.png</normaloff>:/Imagenes/fleup.png</iconset>
     </property>
     <property name="iconSize">
@@ -2412,7 +2412,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/fleizq.png</normaloff>:/Imagenes/fleizq.png</iconset>
     </property>
     <property name="iconSize">
@@ -2451,7 +2451,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/fleder.png</normaloff>:/Imagenes/fleder.png</iconset>
     </property>
     <property name="iconSize">
@@ -2489,7 +2489,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/flebaj.png</normaloff>:/Imagenes/flebaj.png</iconset>
     </property>
     <property name="iconSize">
@@ -2682,7 +2682,7 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="Disparar2">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>960</x>
       <y>590</y>
       <width>79</width>
       <height>40</height>
@@ -2935,7 +2935,7 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="fleup2">
     <property name="geometry">
      <rect>
-      <x>1100</x>
+      <x>1130</x>
       <y>550</y>
       <width>45</width>
       <height>45</height>
@@ -2961,7 +2961,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/fleup.png</normaloff>:/Imagenes/fleup.png</iconset>
     </property>
     <property name="iconSize">
@@ -2974,7 +2974,7 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="fleder2">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1180</x>
       <y>590</y>
       <width>45</width>
       <height>45</height>
@@ -3000,7 +3000,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/fleder.png</normaloff>:/Imagenes/fleder.png</iconset>
     </property>
     <property name="iconSize">
@@ -3032,7 +3032,7 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="fleizq2">
     <property name="geometry">
      <rect>
-      <x>1050</x>
+      <x>1080</x>
       <y>590</y>
       <width>45</width>
       <height>45</height>
@@ -3059,7 +3059,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/fleizq.png</normaloff>:/Imagenes/fleizq.png</iconset>
     </property>
     <property name="iconSize">
@@ -3072,7 +3072,7 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="flebaj2">
     <property name="geometry">
      <rect>
-      <x>1100</x>
+      <x>1130</x>
       <y>630</y>
       <width>45</width>
       <height>45</height>
@@ -3098,7 +3098,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Imagenes.qrc">
       <normaloff>:/Imagenes/flebaj.png</normaloff>:/Imagenes/flebaj.png</iconset>
     </property>
     <property name="iconSize">
@@ -4589,6 +4589,19 @@ background-color:rgb(255, 255, 255)</string>
      <string>Reiniciar Partida</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="planeta">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>590</y>
+      <width>75</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -4602,6 +4615,8 @@ background-color:rgb(255, 255, 255)</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Imagenes.qrc"/>
+ </resources>
  <connections/>
 </ui>
