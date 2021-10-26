@@ -25,6 +25,7 @@
         <file>Imagenes/tyit21.png</file>
         <file>Imagenes/tyit23.png</file>
         <file>Imagenes/tyit33.png</file>
+        <file>Imagenes/ARMY RUST.ttf</file>
     </qresource>
     <qresource prefix="/fonts"/>
 </RCC>
