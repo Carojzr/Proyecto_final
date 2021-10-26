@@ -63,7 +63,7 @@ private slots:
     void on_eliminaP_currentIndexChanged(int index);
 
 
-    void on_planeta_clicked();
+
 
 public slots:
     void Actualizacion();

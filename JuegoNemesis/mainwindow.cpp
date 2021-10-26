@@ -488,6 +488,26 @@ void MainWindow::on_fleizq2_clicked()
 
 void MainWindow::on_Iniciar_clicked()  //boton iniciar
 {
+
+    cuerpos.append(new cuerpodib(-100,0,0,0,70000,300));
+    cuerpodib * cuerpo=new cuerpodib(-3600,0,2,2,70,70);
+    cuerpo->setColor(Qt::green);
+    cuerpodib * cuerpo1=new cuerpodib(-3000,0,-2,-2,70,70);
+    cuerpo1->setColor(Qt::red);
+    cuerpos.append(cuerpo);
+    cuerpos.append(cuerpo1);
+    //    cuerpos.append(new cuerpodib(-100,0,0,0,70000,300));
+    //    //cuerpos.push_back(new cuerpodib(0,0,0,0,70,300));
+    //    scene-> addItem(cuerpos.back());
+    //    cuerpos.append(new cuerpodib(-3600,0,2,2,70,80));
+    //    scene-> addItem(cuerpos.back());
+
+
+    //    cuerpos.append(new cuerpodib(-3000,0,0,-2,70,70));
+    //    scene-> addItem(cuerpos.back());
+    setplanetas();
+
+
     if(iniciar==false){
         iniciar=true;
         ui->fleup1->setEnabled(false);
@@ -556,7 +576,7 @@ void MainWindow::on_Disparar2_clicked() //disparar jugador 2
 void MainWindow::on_Piedras_clicked()  //agregar las piedras
 {
 
-    esfera.push_back(new piedras());  //agrega un nuevo objeto y se agrega al final                                         //de la lista
+    esfera.push_back(new piedras());  //agrega un nuevo objeto y se agrega al final de la lista
     scene-> addItem(esfera.last());
 
     esfera.push_back(new piedras());  //agrega un nuevo objeto y se agrega al final
@@ -565,14 +585,12 @@ void MainWindow::on_Piedras_clicked()  //agregar las piedras
 
     esfera.push_back(new piedras());  //agrega un nuevo objeto y se agrega al final
                                                 //de la lista
-
-
 
 }
 
 void MainWindow::on_menu_clicked()
 {
-
+   // ui->graphicsView->setScene(Scene3)
 }
 
 
@@ -685,27 +703,4 @@ void MainWindow::actualizar()// actualiza los movimientos en la escena
     }
 }
 
-void MainWindow::on_planeta_clicked()
-{
-    //timer2->start(dtt_);
-
-    cuerpos.append(new cuerpodib(-100,0,0,0,70000,300));
-    cuerpodib * cuerpo=new cuerpodib(-3600,0,2,2,70,70);
-    cuerpo->setColor(Qt::green);
-    cuerpodib * cuerpo1=new cuerpodib(-3000,0,-2,-2,70,70);
-    cuerpo1->setColor(Qt::red);
-    cuerpos.append(cuerpo);
-    cuerpos.append(cuerpo1);
-//    cuerpos.append(new cuerpodib(-100,0,0,0,70000,300));
-//    //cuerpos.push_back(new cuerpodib(0,0,0,0,70,300));
-//    scene-> addItem(cuerpos.back());
-//    cuerpos.append(new cuerpodib(-3600,0,2,2,70,80));
-//    scene-> addItem(cuerpos.back());
-
-
-//    cuerpos.append(new cuerpodib(-3000,0,0,-2,70,70));
-//    scene-> addItem(cuerpos.back());
-    setplanetas();
-
-}
 

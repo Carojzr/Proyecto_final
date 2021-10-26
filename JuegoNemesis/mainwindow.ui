@@ -4589,19 +4589,6 @@ background-color:rgb(255, 255, 255)</string>
      <string>Reiniciar Partida</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="planeta">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>590</y>
-      <width>75</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
