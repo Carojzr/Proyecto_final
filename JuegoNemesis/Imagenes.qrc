@@ -26,4 +26,5 @@
         <file>Imagenes/tyit23.png</file>
         <file>Imagenes/tyit33.png</file>
     </qresource>
+    <qresource prefix="/fonts"/>
 </RCC>
